@@ -5,4 +5,11 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
+[lib]
+name = "using_rust_from_python"
+
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.18.1"
+features = ["extension-module"]
